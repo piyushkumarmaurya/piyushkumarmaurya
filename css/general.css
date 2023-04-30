@@ -1,0 +1,193 @@
+/* 
+--- 01 TYPOGRAPHY SYSTEM ---
+
+-FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 / 120
+
+-FONT WEIGHTS
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+-LINE HEIGHTS
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph: 1.6
+
+- LETTER SPACING
+-0.5px
+0.75px
+
+
+--- 02 COLORS ---
+
+-MAIN: #c92a2a
+-TINTS: 
+-SHADES:
+-ACCENTS:
+  padding: 9.6rem 0;
+-GREY: #555, #333, #6f6f6f
+
+
+--- 03 IMAGES ---
+--- 04 ICONS ---
+--- 05 SHADOWS ---
+box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 06 BORDER RADIUS ---
+Default: 9px
+Medium: 11px
+
+--- 07 WHITESPACE ---
+
+-SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Inter&display=swap');
+
+:root {
+  --main-color: #1c7ed6;
+  --text-color-gray: #555;
+  --text-color-white: #fff;
+  --normal-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+  --less-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--text-color-gray);
+  /* Only work if nothing is absolutely positioned in relation to body */
+  overflow-x: hidden;
+}
+
+/*****************************************/
+/* LOGO */
+/*****************************************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 9.6rem;
+  height: 6.4rem;
+}
+
+.logo {
+  height: 4.8rem;
+  width: 150%;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.logo-text {
+  font-family: 'Courgette';
+  font-size: 1.8rem;
+  background-color: var(--main-color);
+  color: var(--text-color-white);
+  padding: 1rem;
+  border-radius: 9px;
+
+  box-shadow: var(--normal-shadow);
+}
+
+.logo-link:link,
+.logo-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color-gray);
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+  border-radius: 9px;
+}
+
+.logo-link:hover {
+  filter: brightness(120%);
+}
+
+.logo-link:active {
+  box-shadow: var(--less-shadow);
+  transform: translate(0, 0.5rem);
+}
+
+/*****************************************/
+/* NAVIGATION */
+/*****************************************/
+
+.main-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+  list-style: none;
+}
+
+.nav-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.nav-list-item:hover {
+  border: 0.1rem solid var(--main-color);
+  border-radius: 9px;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color-gray);
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+  padding: 1rem;
+  border-radius: 9px;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+}
+
+.fa {
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+/*****************************************/
+/* SECTION PROJECTS */
+/*****************************************/
+.section-projects {
+  margin: 8rem auto;
+  width: 80%;
+}
+
+.project-links-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.project-link:link,
+.project-link:visited {
+  font-size: 4rem;
+  text-decoration: none;
+}
